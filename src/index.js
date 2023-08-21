@@ -52,13 +52,36 @@ function App() {
     return (
     <>
     <div>   
-        <h1>Welcome to React. Hello {`${x}`}!</h1>
-        <Pizza />
-        <Pizza />
-        <Pizza />
+        <Header />
+        <Menu />
+        <Footer />
     </div>
     </>
     )
+}
+
+function Header() {
+    return (
+        <>
+        <h1>Fast React Pizza Co.</h1>
+        </> 
+    )
+}
+
+function Menu () {
+    return (
+        <>
+        <h1>Our menu</h1>
+        <Pizza />
+        </>
+    )
+}
+
+function Footer() {
+    return (
+        <footer> {new Date().toLocaleTimeString()}. We're currently open!</footer>
+    )
+    // return React.createElement('footer', null, "We're currently open!")
 }
 
 // React Components need to start with an UpperCase letter.
@@ -67,7 +90,7 @@ function Pizza() {
     return (
     <>
     <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci: Tomato, mozarella, spinach, and ricotta cheese" />
-    <h2>{pizzaData[2].name}:</h2><p>Tomato, mozarella, spinach, and ricotta cheese</p>
+    <h2>{pizzaData[2].name}</h2><p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </>
     )
 }

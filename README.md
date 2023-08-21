@@ -26,4 +26,39 @@
     - Questions List (Parent Component)
         --- Question (Child component of 'Questions List')
 
-# Copied the 3 files from '03-Pizza-Menu' starter file into this projects public folder, then moves index.css from public to src.
+
+
+# What is JSX? 
+
+- JSX is the JavaScript Declarative syntax that describes what components look like and how they work.
+
+- JSX is an extension of JavaScript that allows us to embed JavaScript CSS and React components into HTML, all
+
+- Babel is used to convert the code below into React elements.
+
+<header>
+    <h1 style ="color: red">
+    Hello React!
+    </h1>
+</header>
+
+- Babel converts into......
+
+React.createElement(
+    'header',
+    null,
+    React.createElement(
+        'h1',
+        { style: {color: 'red'}, 'Hello React!'}
+    )
+)
+
+- REMEMBER - Imperative: "How to do things"
+
+- JSX is declarative. Describe what UI should look like using JSX, based on current data.
+- We think of the UI as a refelction of the current data.
+
+
+# Joels Working/Workflow/General Notes:
+
+# 8-21, 2pm: Copied the 3 files from '03-Pizza-Menu' starter file into this projects public folder, then moves index.css from public to src.
