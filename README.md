@@ -95,6 +95,46 @@ Component [ DATA (props + state): Logic & Appearance]
     - Also makes debugging much easier when data is only going one way.
     - One-way data binding is more efficient for speed and implementation.
 
+# The Rules of JSX
+
+- General Rules:
+
+- Works like HTML, but we can enter "JavaScript mode" by using {} (for text or attributes)
+- JS expressions can be palced inside {}. reference variables, create arrays or objects, [].mpa(), ternary operator
+    - NO statements: if/else, for switch.
+
+- Differences between JSX and HTML:
+
+- className instead of class.
+- htmlFor instead of HTML's for
+- Every tag needs to be closed.
+
+# Rendering Lists.
+
+- How to render lists in React...
+    - When we have an array and we want to create 1 component for each element of the array.
+    - We MUST use .map() to create a new array with the component and necessary props within.
+    - 
+
+# Conditional Rendering with &&
+
+- We will often short circuit (using the isOpen variable). first, we check tht the is open variable is true (ie, if the current hour is within the set open and close times). then, we return the component stating the restaurant is open until ${closeHour} time.
+
+# Conditional Rendering with Ternaries
+
+- Similar to Short circuiting with &&, we can use the ternary operator to instead render something else when the pizzas arrays length is 0.
+
+- What about with multiple returns?
+- Each component can still only return one block of JXS, but it can depend on a condition we create outside of the component.
+- Such as a "if(!isLoaded) && '...' " to return a "Please wait, Loading..." screen instead of the actual component.
+
+# Destructuring Props!
+
+- When we pass 'props', it automatically receives the object of props that contains all the props we passed in. All components receive this props object, but we still need to pass it.
+
+- Instead of passing 'props', we pass the destructured version of the ojbect inside {}, so we don't have to write out props for each one passed.
+
+# Setting Classes and Text conditionally.
 
 
 # Joels Working/Workflow/General Notes:
