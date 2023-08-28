@@ -136,6 +136,17 @@ Component [ DATA (props + state): Logic & Appearance]
 
 # Setting Classes and Text conditionally.
 
+- className can bet set to either 'sold-out' or nothing depending on whether or not pizzaObj.soldOut is true, or false. The same goes for the price element in the HTML.
+
+<li className={`pizza ${pizzaObj.soldOut ? 'sold-out' : ''}`}>
+        <img src={pizzaObj.photoName} alt={pizzaObj.name} />
+        <div>
+            <h3>{pizzaObj.name}</h3>
+            <p>{pizzaObj.ingredients}</p>
+            <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span> 
+        </div>
+    </li>
+
 
 # Joels Working/Workflow/General Notes:
 
